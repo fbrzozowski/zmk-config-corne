@@ -10,6 +10,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        semicolon {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <33 32>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +31,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F         &kp P         &kp G                      &kp J    &kp L            &kp U      &kp Y    &kp BSLH  &kp BSPC
-&trans     &kp A  &kp R  &kp S         &kp T         &kp D                      &kp H    &kp N            &kp E      &kp I    &kp O     &kp SEMI
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V         &kp B                      &kp K    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LC(LGUI)  &lt 2 DELETE  &mt LG(LS(SPACE)) SPACE    &kp RET  &lt 1 BACKSPACE  &kp RALT
+&kp GRAVE  &kp Q  &kp W  &kp F      &kp P         &kp G             &kp J                 &kp L            &kp U      &kp Y    &kp BSLH  &kp BSPC
+&kp TAB    &kp A  &kp R  &kp S      &kp T         &kp D             &kp H                 &kp N            &kp E      &kp I    &kp O     &kp PIPE
+&kp LSHFT  &kp Z  &kp X  &kp C      &kp V         &kp B             &kp K                 &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LCTRL  &lt 2 DELETE  &mt LGUI SPACE    &mt LEFT_SHIFT ENTER  &lt 1 BACKSPACE  &kp RALT
             >;
         };
 
@@ -36,10 +46,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &mt F1 EXCLAMATION  &mt F2 AT          &mt F3 HASH           &mt F4 DOLLAR          &mt F5 PERCENT    &kp PLUS   &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans    &kp BSPC
-&kp LCTRL  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans              &kp AMPERSAND      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE    &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PIPE  &kp TILDE
-                                                  &kp LGUI              &trans                 &kp SPACE         &kp RET    &kp NUMBER_0  &kp RALT
+&kp ESCAPE  &mt F1 EXCLAMATION  &mt F2 AT          &mt F3 HASH           &mt F4 DOLLAR          &mt F5 PERCENT    &mt F6 PLUS  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &trans    &kp BSPC
+&none       &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp EQUAL    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp BSLH  &kp GRAVE
+&kp LSHFT   &trans              &kp AMPERSAND      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE    &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PIPE  &kp TILDE
+                                                   &kp LGUI              &trans                 &kp SPACE         &kp RET      &trans        &kp NUMBER_0
             >;
         };
 
@@ -51,10 +61,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans       &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &trans        &kp K_VOL_UP       &kp BSPC
-&trans     &trans  &kp NUMBER_5  &kp N5        &kp NUMBER_6  &trans       &kp LEFT      &kp DOWN          &kp UP        &kp RIGHT     &kp K_VOLUME_DOWN  &sys_reset
-&kp LSHFT  &trans  &kp N7        &kp N8        &kp N9        &trans       &out OUT_USB  &out OUT_BLE      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_CLR         &bootloader
-                                 &kp LGUI      &trans        &kp SPACE    &kp RET       &trans            &kp RALT
+&kp TAB    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR         &out OUT_USB    &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT  &none      &none  &none
+&none      &none         &none         &none         &kp K_VOLUME_UP    &out OUT_BLE    &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT  &none  &sys_reset
+&kp LSHFT  &none         &none         &none         &kp K_VOLUME_DOWN  &kp K_MUTE      &none       &none             &none       &none      &none  &bootloader
+                                       &kp LGUI      &none              &kp SPACE       &kp RET     &kp DEL           &kp RALT
             >;
         };
     };
