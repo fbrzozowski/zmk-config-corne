@@ -11,6 +11,11 @@
 
 &mt { tapping-term-ms = <150>; };
 
+&lt {
+    tapping-term-ms = <150>;
+    flavor = "balanced";
+};
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -40,6 +45,20 @@
             #binding-cells = <0>;
             bindings = <&kp LG(SPACE) &kp I &kp N &kp T &kp E &kp L &kp L &kp I &kp J &kp ENTER>;
             label = "OPEN_INTELLIJ";
+        };
+
+        open_iterm: open_iterm {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp I &kp T &kp E &kp R &kp M &kp ENTER>;
+            label = "OPEN_ITERM";
+        };
+
+        open_foobar: open_foobar {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE) &kp F &kp O &kp O &kp B &kp A &kp R &kp N2 &kp N0 &kp N0 &kp N0 &kp ENTER>;
+            label = "OPEN_FOOBAR";
         };
     };
 
@@ -84,10 +103,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_CLR         &out OUT_USB    &kp K_PREV  &kp K_PLAY_PAUSE  &kp K_NEXT   &none      &none  &none
-&none      &open_brave   &open_intellij  &none         &kp K_VOLUME_UP    &out OUT_BLE    &kp LEFT    &kp DOWN          &kp UP       &kp RIGHT  &none  &sys_reset
-&kp LSHFT  &none         &none           &none         &kp K_VOLUME_DOWN  &kp K_MUTE      &none       &kp PAGE_DOWN     &kp PAGE_UP  &none      &none  &bootloader
-                                         &kp LGUI      &none              &kp SPACE       &kp RET     &kp DEL           &kp RALT
+&kp TAB      &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_CLR         &out OUT_USB    &kp C_PREV  &kp C_PAUSE    &kp C_NEXT   &none      &none  &none
+&open_iterm  &open_brave   &open_intellij  &open_foobar  &kp K_VOLUME_UP    &out OUT_BLE    &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &none  &sys_reset
+&kp LSHFT    &none         &none           &none         &kp K_VOLUME_DOWN  &kp K_MUTE      &none       &kp PAGE_DOWN  &kp PAGE_UP  &none      &none  &bootloader
+                                           &kp LGUI      &none              &kp SPACE       &kp RET     &kp DEL        &kp RALT
             >;
         };
     };
