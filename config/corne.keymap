@@ -103,10 +103,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB      &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_CLR         &out OUT_USB    &kp C_PREV  &kp C_PAUSE    &kp C_NEXT   &none      &none  &none
-&open_iterm  &open_brave   &open_intellij  &open_foobar  &kp K_VOLUME_UP    &out OUT_BLE    &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &none  &sys_reset
-&kp LSHFT    &none         &none           &none         &kp K_VOLUME_DOWN  &kp K_MUTE      &none       &kp PAGE_DOWN  &kp PAGE_UP  &none      &none  &bootloader
-                                           &kp LGUI      &none              &kp SPACE       &kp RET     &kp DEL        &kp RALT
+&kp TAB            &bt BT_SEL 1            &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_CLR         &kp K_VOLUME_UP      &kp C_PREV  &kp C_PAUSE    &kp C_NEXT   &none      &out OUT_BLE  &out OUT_USB
+&kp LA(LC(ENTER))  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(DOWN_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT))  &kp K_VOLUME_DOWN    &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &none         &sys_reset
+&kp LSHFT          &none                   &open_foobar            &open_brave           &open_intellij     &kp K_MUTE           &none       &kp PAGE_DOWN  &kp PAGE_UP  &none      &none         &bootloader
+                                                                   &kp LGUI              &none              &kp SPACE            &kp RET     &kp DEL        &kp RALT
             >;
         };
     };
