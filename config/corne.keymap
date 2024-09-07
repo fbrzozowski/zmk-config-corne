@@ -88,10 +88,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE  &mt F1 EXCLAMATION  &mt F2 AT          &mt F3 HASH           &mt F4 DOLLAR          &mt F5 PERCENT    &mt F6 PLUS  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &none  &none
-&none       &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none             &kp EQUAL    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none
-&kp LSHFT   &trans              &kp AMPS           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE    &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                                   &kp LGUI              &trans                 &kp SPACE         &kp RET      &trans        &kp NUMBER_0
+&mt LG(LA(ESCAPE)) ESCAPE  &mt F1 EXCLAMATION  &mt F2 AT          &mt F3 HASH           &mt F4 DOLLAR          &mt F5 PERCENT    &mt F6 PLUS  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &none  &none
+&none                      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none             &kp EQUAL    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none
+&kp LSHFT                  &trans              &kp AMPS           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE    &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                                                                  &kp LGUI              &trans                 &kp SPACE         &kp RET      &trans        &kp NUMBER_0
             >;
         };
 
