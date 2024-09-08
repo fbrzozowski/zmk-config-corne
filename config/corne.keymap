@@ -110,10 +110,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&mt LG(LA(ESCAPE)) ESCAPE  &mt F1 EXCLAMATION  &mt F2 AT          &mt F3 HASH           &mt F4 DOLLAR          &mt F5 PERCENT    &mt F6 PLUS  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &none  &none
-&none                      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none             &kp EQUAL    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none
-&kp LSHFT                  &trans              &kp AMPS           &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE    &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                                                  &kp LESS_THAN         &kp GREATER_THAN       &kp SPACE         &kp RET      &trans        &kp NUMBER_0
+&mt LG(LA(ESCAPE)) ESCAPE  &mt F1 EXCLAMATION  &mt F2 AT          &mt F3 HASH           &mt F4 DOLLAR          &mt F5 PERCENT       &mt F6 PLUS  &kp N7        &kp NUMBER_8  &kp NUMBER_9  &none  &none
+&kp AMPERSAND              &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES    &kp EQUAL    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none
+&kp LSHFT                  &kp SEMI            &kp COLON          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp UNDERSCORE       &kp MINUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                                                                  &kp LESS_THAN         &kp GREATER_THAN       &kp SPACE            &kp RET      &trans        &kp NUMBER_0
             >;
         };
 
@@ -125,10 +125,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB            &bt BT_SEL 1            &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_CLR         &kp K_VOLUME_UP      &kp C_PREV  &kp C_PAUSE    &kp C_NEXT   &none      &out OUT_BLE  &out OUT_USB
-&kp LA(LC(ENTER))  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(DOWN_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT))  &kp K_VOLUME_DOWN    &kp LEFT    &kp DOWN       &kp UP       &kp RIGHT  &tog 1        &tog 0
-&kp LSHFT          &open_foobar            &open_slack             &open_brave           &open_intellij     &kp K_MUTE           &none       &kp PAGE_DOWN  &kp PAGE_UP  &none      &sys_reset    &bootloader
-                                                                   &kp LGUI              &none              &kp SPACE            &kp RET     &kp DEL        &kp RALT
+&kp TAB            &bt BT_SEL 1            &bt BT_SEL 2            &bt BT_SEL 3          &bt BT_CLR         &kp K_VOLUME_UP      &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT   &none      &out OUT_BLE  &out OUT_USB
+&kp LA(LC(ENTER))  &kp LC(LA(LEFT_ARROW))  &kp LC(LA(DOWN_ARROW))  &kp LC(LA(UP_ARROW))  &kp LC(LA(RIGHT))  &kp K_VOLUME_DOWN    &kp LEFT    &kp DOWN          &kp UP       &kp RIGHT  &tog 1        &tog 0
+&kp LSHFT          &open_foobar            &open_slack             &open_brave           &open_intellij     &kp K_MUTE           &none       &kp PAGE_DOWN     &kp PAGE_UP  &none      &sys_reset    &bootloader
+                                                                   &kp LGUI              &none              &kp SPACE            &kp RET     &kp DEL           &kp RALT
             >;
         };
 
