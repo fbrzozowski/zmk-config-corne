@@ -17,6 +17,9 @@
 };
 
 / {
+    zmk,ble {
+        bt-name = "KiciBoard";
+    };
     combos {
         compatible = "zmk,combos";
 
