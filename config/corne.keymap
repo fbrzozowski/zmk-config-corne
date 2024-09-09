@@ -14,7 +14,10 @@
     tapping-term-ms = <100>;
 };
 
-&lt { flavor = "tap-unless-interrupted"; };
+&lt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <100>;
+};
 
 / {
     zmk,ble { bt-name = "KiciBoard"; };
