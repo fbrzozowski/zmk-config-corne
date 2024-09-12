@@ -105,7 +105,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&mt LG(LA(ESCAPE)) ESCAPE  &kp ASTERISK    &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp DOUBLE_QUOTES    &mt F7 N7        &mt F8 N8        &mt F9 N9        &kp AMPERSAND  &none
+&mt LG(LA(ESCAPE)) ESCAPE  &kp ASTERISK    &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp DOUBLE_QUOTES    &mt F7 N7        &mt F8 N8        &mt F9 N9        &kp AMPERSAND  &caps_word
 &kp DOLLAR                 &kp UNDERSCORE  &kp EXCLAMATION   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &mt SEMICOLON COLON  &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6  &kp PERCENT    &none
 &trans                     &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS    &kp SQT              &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &kp CARET      &none
                                                              &kp DELETE            &kp BACKSPACE          &kp SPACE    &kp RET              &trans           &kp NUMBER_0
