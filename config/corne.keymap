@@ -11,7 +11,7 @@
 
 &mt { flavor = "balanced"; };
 
-&lt { flavor = "balanced"; };
+&lt { flavor = "hold-preferred"; };
 
 / {
     zmk,ble { bt-name = "KiciBoard"; };
@@ -110,6 +110,8 @@
 &kp DOLLAR                 &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS    &kp SQT              &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &kp PERIOD     &none
                                                              &kp DELETE            &trans                 &kp SPACE    &kp RET              &trans           &kp NUMBER_0
             >;
+
+            label = "numpad";
         };
 
         lower_layer {
@@ -125,6 +127,8 @@
 &trans             &open_foobar                                   &open_slack             &open_brave           &open_intellij                       &kp K_MUTE           &none       &kp PAGE_DOWN     &kp PAGE_UP  &none      &sys_reset  &bootloader
                                                                                           &kp LGUI              &trans                               &kp SPACE            &kp RET     &trans            &kp RALT
             >;
+
+            label = "navigation";
         };
 
         conditonal_layer {
