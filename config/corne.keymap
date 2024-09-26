@@ -10,12 +10,15 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    flavor = "tap-preferred";
+    flavor = "balanced";
     quick-tap-ms = <100>;
     tapping-term-ms = <190>;
 };
 
-&lt { tapping-term-ms = <190>; };
+&lt {
+    tapping-term-ms = <190>;
+    flavor = "balanced";
+};
 
 / {
     zmk,ble { bt-name = "KiciBoard"; };
