@@ -12,11 +12,14 @@
 &mt {
     flavor = "hold-preferred";
     hold-while-undecided-linger;
+    tapping-term-ms = <185>;
 };
 
 &lt {
-    tapping-term-ms = <190>;
+    tapping-term-ms = <185>;
     flavor = "balanced";
+    hold-while-undecided-linger;
+    quick-tap-ms = <140>;
 };
 
 / {
