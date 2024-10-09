@@ -12,12 +12,14 @@
 &mt {
     flavor = "hold-preferred";
     tapping-term-ms = <185>;
+    hold-while-undecided;
 };
 
 &lt {
     tapping-term-ms = <185>;
     flavor = "balanced";
     quick-tap-ms = <140>;
+    hold-while-undecided;
 };
 
 / {
@@ -124,7 +126,7 @@
 
             bindings = <
 &mt LG(LA(ESCAPE)) ESCAPE  &kp ASTERISK    &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp DOUBLE_QUOTES    &mt F7 N7        &mt F8 N8        &mt F9 N9        &mt F10 AMPERSAND  &caps_word
-&kp HASH                   &kp UNDERSCORE  &kp EXCLAMATION   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &mt SEMICOLON COLON  &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6  &mt N0 F11         &kp LCTRL
+&kp HASH                   &kp UNDERSCORE  &kp EXCLAMATION   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &mt SEMICOLON COLON  &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6  &mt F11 NUMBER_0   &kp LCTRL
 &kp DOLLAR                 &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS    &kp SQT              &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F12 PERIOD     &kp PERCENT
                                                              &kp DELETE            &trans                 &kp SPACE    &kp RET              &trans           &kp NUMBER_0
             >;
