@@ -89,6 +89,13 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
         };
+
+        shift_cmd_tab: shift_cmd_tab {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CMD_TAB";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LG(TAB)>;
+        };
     };
 
     keymap {
@@ -102,10 +109,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&esc_grave  &kp Q  &kp W  &kp F         &kp P  &kp G             &kp J                 &kp L            &kp U      &kp Y    &kp BACKSLASH  &caps_word
-&kp TAB     &kp A  &kp R  &kp S         &kp T  &kp D             &kp H                 &kp N            &kp E      &kp I    &kp O          &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C         &kp V  &kp B             &kp K                 &kp M            &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                          &kp LEFT_ALT  &mo 3  &mt LGUI SPACE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &kp LCTRL
+&esc_grave      &kp Q  &kp W  &kp F         &kp P  &kp G             &kp J                 &kp L            &kp U      &kp Y    &kp BACKSLASH  &caps_word
+&kp TAB         &kp A  &kp R  &kp S         &kp T  &kp D             &kp H                 &kp N            &kp E      &kp I    &kp O          &kp SQT
+&shift_cmd_tab  &kp Z  &kp X  &kp C         &kp V  &kp B             &kp K                 &kp M            &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
+                              &kp LEFT_ALT  &mo 3  &mt LGUI SPACE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &kp LCTRL
             >;
 
             label = "colemak";
