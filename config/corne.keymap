@@ -38,50 +38,6 @@
         };
     };
 
-    macros {
-        open_brave: open_brave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp B &kp R &kp A &kp V &kp E &kp ENTER>;
-            label = "OPEN_BRAVE";
-        };
-
-        open_intellij: open_intellij {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp I &kp N &kp T &kp E &kp L &kp L &kp I &kp J &kp ENTER>;
-            label = "OPEN_INTELLIJ";
-        };
-
-        open_iterm: open_iterm {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp I &kp T &kp E &kp R &kp M &kp ENTER>;
-            label = "OPEN_ITERM";
-        };
-
-        open_foobar: open_foobar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp F &kp O &kp O &kp B &kp A &kp R &kp N2 &kp N0 &kp N0 &kp N0 &kp ENTER>;
-            label = "OPEN_FOOBAR";
-        };
-
-        open_slack: open_slack {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp S &kp L &kp A &kp C &kp K &kp ENTER>;
-            label = "OPEN_SLACK";
-        };
-
-        open_obsidian: open_obsidian {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp O &kp B &kp S &kp I &kp D &kp I &kp A &kp N>;
-            label = "OPEN_OBSIDIAN";
-        };
-    };
-
     behaviors {
         esc_grave: esc_grave {
             compatible = "zmk,behavior-tap-dance";
@@ -154,10 +110,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB            &none                                          &kp LC(LA(D))                         &kp LC(LA(F))                       &kp LC(LA(G))                        &kp K_VOLUME_UP      &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT   &none      &kp LS(LG(NUMBER_4))  &none
-&kp LA(LC(ENTER))  &mt LC(LA(LG(LEFT_ARROW))) LC(LA(LEFT_ARROW))  &mt LC(LA(DOWN_ARROW)) LC(LA(MINUS))  &mt LC(LA(UP_ARROW)) LC(LA(EQUAL))  &mt LC(LA(LG(RIGHT))) LA(LC(RIGHT))  &kp K_VOLUME_DOWN    &kp LEFT    &kp DOWN          &kp UP       &kp RIGHT  &kp LS(LG(NUMBER_5))  &none
-&open_obsidian     &open_foobar                                   &open_slack                           &open_brave                         &open_intellij                       &kp K_MUTE           &none       &kp PAGE_DOWN     &kp PAGE_UP  &none      &none                 &none
-                                                                                                        &kp LGUI                            &trans                               &kp SPACE            &kp RET     &trans            &kp RALT
+&kp TAB            &kp LG(LC(Q))                                  &kp LC(LA(D))                         &kp LC(LA(F))                       &kp LC(LA(G))                        &kp K_VOLUME_UP      &kp PAGE_UP    &none       &none             &none       &kp LS(LG(NUMBER_4))  &none
+&kp LA(LC(ENTER))  &mt LC(LA(LG(LEFT_ARROW))) LC(LA(LEFT_ARROW))  &mt LC(LA(DOWN_ARROW)) LC(LA(MINUS))  &mt LC(LA(UP_ARROW)) LC(LA(EQUAL))  &mt LC(LA(LG(RIGHT))) LA(LC(RIGHT))  &kp K_VOLUME_DOWN    &kp LEFT       &kp DOWN    &kp UP            &kp RIGHT   &kp LS(LG(NUMBER_5))  &none
+&trans             &none                                          &none                                 &none                               &kp LC(LA(D))                        &kp K_MUTE           &kp PAGE_DOWN  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &none                 &none
+                                                                                                        &kp LGUI                            &trans                               &kp SPACE            &kp RET        &trans      &kp RALT
             >;
 
             label = "navigation";
