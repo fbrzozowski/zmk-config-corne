@@ -10,9 +10,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    tapping-term-ms = <170>;
-    require-prior-idle-ms = <140>;
+    tapping-term-ms = <185>;
+    require-prior-idle-ms = <150>;
     flavor = "balanced";
+    hold-trigger-on-release;
 };
 
 &lt {
