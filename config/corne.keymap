@@ -11,7 +11,7 @@
 
 &mt {
     tapping-term-ms = <185>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <100>;
     flavor = "balanced";
     hold-trigger-on-release;
 };
@@ -75,10 +75,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp GRAVE          &kp Q        &kp W           &kp F           &kp P             &kp G                 &kp J                  &kp L             &kp U           &kp Y           &kp BACKSLASH  &none
+&kp ESCAPE         &kp Q        &kp W           &kp F           &kp P             &kp G                 &kp J                  &kp L             &kp U           &kp Y           &kp BACKSLASH  &none
 &kp TAB            &mt LCTRL A  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp D                 &kp H                  &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LCTRL O    &none
 &shift_caps_words  &kp Z        &kp X           &kp C           &kp V             &kp B                 &kp K                  &kp M             &kp COMMA       &kp DOT         &kp FSLH       &none
-                                                &kp LEFT_ALT    &mo 3             &mt LEFT_GUI SPACE    &mt LEFT_SHIFT RETURN  &lt 2 BACKSPACE   &kp ESCAPE
+                                                &kp LEFT_ALT    &mo 3             &mt LEFT_GUI SPACE    &mt LEFT_SHIFT RETURN  &lt 2 BACKSPACE   &kp GRAVE
             >;
 
             label = "colemak";
