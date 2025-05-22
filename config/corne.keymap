@@ -10,14 +10,16 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <185>;
+    require-prior-idle-ms = <150>;
 };
 
 &lt {
     tapping-term-ms = <185>;
-    flavor = "hold-preferred";
+    flavor = "balanced";
     quick-tap-ms = <140>;
+    require-prior-idle-ms = <150>;
 };
 
 / {
@@ -72,10 +74,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&esc_grave         &kp Q  &kp W  &kp F         &kp P  &kp G             &kp J                 &kp L            &kp U      &kp Y    &kp BACKSLASH  &caps_word
-&kp TAB            &kp A  &kp R  &kp S         &kp T  &kp D             &kp H                 &kp N            &kp E      &kp I    &kp O          &kp SQT
-&shift_caps_words  &kp Z  &kp X  &kp C         &kp V  &kp B             &kp K                 &kp M            &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                                 &kp LEFT_ALT  &mo 3  &mt LGUI SPACE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &kp LCTRL
+&esc_grave         &kp Q        &kp W           &kp F           &kp P             &kp G             &kp J                 &kp L             &kp U           &kp Y           &kp BACKSLASH  &caps_word
+&kp TAB            &mt LCTRL R  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp D             &kp H                 &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LCTRL O    &kp SQT
+&shift_caps_words  &kp Z        &kp X           &kp C           &kp V             &kp B             &kp K                 &kp M             &kp COMMA       &kp DOT         &kp FSLH       &kp ESC
+                                                &kp LEFT_ALT    &mo 3             &mt LGUI SPACE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE   &kp LCTRL
             >;
 
             label = "colemak";
