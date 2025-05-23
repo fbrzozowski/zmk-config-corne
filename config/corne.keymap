@@ -13,7 +13,7 @@
 #define KEYS_R 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 // Right-hand keys.
 
 &mt {
-    tapping-term-ms = <185>;
+    tapping-term-ms = <150>;
     require-prior-idle-ms = <100>;
     flavor = "balanced";
     hold-trigger-key-positions = <KEYS_R KEYS_L>;
@@ -21,7 +21,7 @@
 };
 
 &lt {
-    tapping-term-ms = <185>;
+    tapping-term-ms = <170>;
     flavor = "hold-preferred";
     quick-tap-ms = <140>;
 };
