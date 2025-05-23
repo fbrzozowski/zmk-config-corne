@@ -9,17 +9,21 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define KEYS_L 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  // Left-hand keys.
+#define KEYS_R 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 // Right-hand keys.
+
 &mt {
     tapping-term-ms = <185>;
     require-prior-idle-ms = <100>;
     flavor = "balanced";
+    hold-trigger-key-positions = <KEYS_R KEYS_L>;
     hold-trigger-on-release;
 };
 
 &lt {
     tapping-term-ms = <185>;
     flavor = "hold-preferred";
-    require-prior-idle-ms = <130>;
+    quick-tap-ms = <140>;
 };
 
 / {
