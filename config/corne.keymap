@@ -118,7 +118,7 @@
                                                  &kp LEFT_ALT    &mo 2             &mt LEFT_GUI SPACE    &mt LEFT_SHIFT RETURN  &lt 1 BACKSPACE   &kp GRAVE
             >;
 
-            label = "colemak";
+            label = "fxb";
         };
 
         raise_layer {
