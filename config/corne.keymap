@@ -15,14 +15,14 @@
 
 &mt {
     tapping-term-ms = <150>;
-    require-prior-idle-ms = <100>;
+    require-prior-idle-ms = <70>;
     flavor = "balanced";
     hold-trigger-key-positions = <KEYS_R KEYS_L>;
     hold-trigger-on-release;
 };
 
 &lt {
-    tapping-term-ms = <150>;
+    tapping-term-ms = <100>;
     flavor = "balanced";
     quick-tap-ms = <140>;
     hold-trigger-on-release;
