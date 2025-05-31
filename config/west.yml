@@ -6,13 +6,23 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: m165437 #new entry
       url-base: https://github.com/M165437 #new entry
+    - name: cirque_trackpad
+      url-base: https://github.com/petejohanson
+    - name: pm0u
+      url-base: https://github.com/pm0u
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-view-gem #new entry
-      remote: m165437 #new entry
-      revision: main #new entry
+    - name: cirque-input-module
+      revision: main
+      remote: cirque_trackpad
+    - name: glidepoint_i2c
+      remote: pm0u
+      revision: main
+    #- name: nice-view-gem #new entry
+      #remote: m165437 #new entry
+      #revision: main #new entry
   self:
     path: config
