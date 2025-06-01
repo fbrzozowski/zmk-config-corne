@@ -166,6 +166,15 @@
 
             label = "system";
         };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans  &trans  &trans
+                        &trans  &trans  &trans    &mkp MB1  &mkp MB2  &mkp MB3
+            >;
+        };
     };
 
     conditional_layers {
