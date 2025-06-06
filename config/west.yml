@@ -29,6 +29,9 @@ manifest:
     - name: cirque-input-module
       remote: halfdane
       revision: absolute_mode
+    - name: zmk-input-gestures
+      remote: halfdane
+      revision: main
     #- name: nice-view-gem #new entry
       #remote: m165437 #new entry
       #revision: main #new entry
