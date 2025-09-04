@@ -1,8 +1,9 @@
 #include "corne.dtsi"
-
+/*
 &glidepoint_listener {
     status = "okay";
 };
+*/
 
 &kscan0 {
     col-gpios
