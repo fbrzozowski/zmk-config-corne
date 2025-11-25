@@ -114,8 +114,8 @@
 
             bindings = <
 &gresc             &kp Q        &kp W            &kp F           &kp P             &kp G                 &kp J                  &kp L             &kp U           &kp Y            &kp BACKSLASH  &none
-&kp TAB            &mt LCTRL A  &mt RIGHT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp D                 &kp H                  &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt RIGHT_ALT I  &mt LCTRL O    &none
-&shift_caps_words  &kp Z        &kp X            &kp C           &kp V             &kp B                 &kp K                  &kp M             &kp COMMA       &kp DOT          &kp FSLH       &none
+&kp TAB            &mt LCTRL A  &mt RIGHT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp D                 &kp H                  &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt RIGHT_ALT I  &mt LCTRL O    &kp LS(LG(NUMBER_4))
+&shift_caps_words  &kp Z        &kp X            &kp C           &kp V             &kp B                 &kp K                  &kp M             &kp COMMA       &kp DOT          &kp FSLH       &kp ESC
                                                  &kp LEFT_ALT    &mo 2             &mt LEFT_GUI SPACE    &mt LEFT_SHIFT RETURN  &lt 1 BACKSPACE   &kp GRAVE
             >;
 
@@ -130,9 +130,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp AMPERSAND  &kp ASTERISK     &kp AT_SIGN     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp DOUBLE_QUOTES    &mt F7 N7        &mt F8 N8        &mt F9 N9        &mt F10 AMPERSAND  &kp LS(LG(NUMBER_4))
-&kp HASH       &kp EXCLAMATION  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &mt SEMICOLON COLON  &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6  &mt F11 NUMBER_0   &none
-&kp DOLLAR     &kp CARET        &kp PERCENT     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS    &kp SQT              &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F12 PERIOD     &kp ESC
+&kp AMPERSAND  &kp ASTERISK    &kp AT_SIGN      &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp DOUBLE_QUOTES    &mt F7 N7        &mt F8 N8        &mt F9 N9        &mt F10 AMPERSAND  &none
+&kp HASH       &kp UNDERSCORE  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &mt SEMICOLON COLON  &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6  &mt F11 NUMBER_0   &none
+&kp DOLLAR     &kp CARET       &kp PERCENT      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS    &kp SQT              &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F12 PERIOD     &trans
                                                 &kp DELETE            &trans                 &kp SPACE    &kp RET              &trans           &kp NUMBER_0
             >;
 
@@ -158,9 +158,9 @@
 
         conditonal_layer {
             bindings = <
-&bt BT_CLR   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp K_VOL_UP         &out OUT_BLE    &ext_power EP_TOG  &none  &none  &none  &none
-&sys_reset   &none         &none         &none         &none         &kp K_VOLUME_DOWN    &out OUT_USB    &none              &none  &none  &none  &sys_reset
-&bootloader  &none         &none         &none         &none         &kp K_MUTE           &studio_unlock  &none              &none  &none  &none  &bootloader
+&bt BT_CLR   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp K_VOL_UP         &out OUT_BLE    &ext_power EP_TOG  &ext_power EP_ON  &none  &none  &none
+&sys_reset   &none         &none         &none         &none         &kp K_VOLUME_DOWN    &out OUT_USB    &none              &none             &none  &none  &sys_reset
+&bootloader  &none         &none         &none         &none         &kp K_MUTE           &studio_unlock  &none              &none             &none  &none  &bootloader
                                          &none         &none         &none                &none           &none              &none
             >;
 
