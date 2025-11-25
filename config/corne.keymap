@@ -5,168 +5,55 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-
-&mt {
-    flavor = "hold-preferred";
-    tapping-term-ms = <185>;
-};
-
-&lt {
-    tapping-term-ms = <185>;
-    flavor = "balanced";
-    quick-tap-ms = <140>;
-};
+#include <dt-bindings/zmk/bt.h>
 
 / {
-    zmk,ble { bt-name = "KiciBoard"; };
+        keymap {
+                compatible = "zmk,keymap";
 
-    combos {
-        compatible = "zmk,combos";
+                default_layer {
+                        display-name = "Default Layer";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                        bindings = <
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                        >;
+                };
+                lower_layer {
+                        display-name = "Lower Layer";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
+                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        >;
+                };
 
-        semicolon {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <33 32>;
-            layers = <0>;
+                raise_layer {
+                        display-name = "Raise Layer";
+// -----------------------------------------------------------------------------------------
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |   | ENT |     | ALT |
+                        bindings = <
+   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
+   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
+                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
         };
-
-        spotlight {
-            bindings = <&kp LG(SPACE)>;
-            key-positions = <38 39>;
-        };
-    };
-
-    macros {
-        open_brave: open_brave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp B &kp R &kp A &kp V &kp E &kp ENTER>;
-            label = "OPEN_BRAVE";
-        };
-
-        open_intellij: open_intellij {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp I &kp N &kp T &kp E &kp L &kp L &kp I &kp J &kp ENTER>;
-            label = "OPEN_INTELLIJ";
-        };
-
-        open_iterm: open_iterm {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp I &kp T &kp E &kp R &kp M &kp ENTER>;
-            label = "OPEN_ITERM";
-        };
-
-        open_foobar: open_foobar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp F &kp O &kp O &kp B &kp A &kp R &kp N2 &kp N0 &kp N0 &kp N0 &kp ENTER>;
-            label = "OPEN_FOOBAR";
-        };
-
-        open_slack: open_slack {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &kp S &kp L &kp A &kp C &kp K &kp ENTER>;
-            label = "OPEN_SLACK";
-        };
-    };
-
-    behaviors {
-        esc_grave: esc_grave {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ESC_GRAVE";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp GRAVE>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        colemak {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-
-            bindings = <
-&esc_grave  &kp Q  &kp W  &kp F         &kp P  &kp G             &kp J                 &kp L            &kp U      &kp Y    &kp BACKSLASH  &none
-&kp TAB     &kp A  &kp R  &kp S         &kp T  &kp D             &kp H                 &kp N            &kp E      &kp I    &kp O          &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C         &kp V  &kp B             &kp K                 &kp M            &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                          &kp LEFT_ALT  &mo 3  &mt LGUI SPACE    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE  &kp LCTRL
-            >;
-
-            label = "colemak";
-        };
-
-        qwerty {
-            bindings = <
-&esc_grave  &kp Q  &kp W  &kp E     &kp R  &kp T                  &kp Y                  &kp U            &kp I      &kp O    &kp P     &kp LBKT
-&kp TAB     &kp A  &kp S  &kp D     &kp F  &kp G                  &kp H                  &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp V  &kp B                  &kp N                  &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                          &kp LALT  &mo 3  &mt LEFT_META SPACE    &mt LEFT_SHIFT RETURN  &lt 2 BACKSPACE  &kp LCTRL
-            >;
-
-            label = "qwerty";
-        };
-
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&mt LG(LA(ESCAPE)) ESCAPE  &kp ASTERISK    &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp DOUBLE_QUOTES    &mt F7 N7        &mt F8 N8        &mt F9 N9        &mt F10 AMPERSAND  &caps_word
-&kp HASH                   &kp UNDERSCORE  &kp EXCLAMATION   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &mt SEMICOLON COLON  &mt F4 NUMBER_4  &mt F5 N5        &mt F6 NUMBER_6  &mt F11 NUMBER_0   &kp LCTRL
-&kp DOLLAR                 &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp MINUS    &kp SQT              &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F12 PERIOD     &kp PERCENT
-                                                             &kp DELETE            &trans                 &kp SPACE    &kp RET              &trans           &kp NUMBER_0
-            >;
-
-            label = "numpad";
-        };
-
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB            &none                                          &kp LC(LA(D))                         &kp LC(LA(F))                       &kp LC(LA(G))                        &kp K_VOLUME_UP      &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT   &none      &none  &none
-&kp LA(LC(ENTER))  &mt LC(LA(LG(LEFT_ARROW))) LC(LA(LEFT_ARROW))  &mt LC(LA(DOWN_ARROW)) LC(LA(MINUS))  &mt LC(LA(UP_ARROW)) LC(LA(EQUAL))  &mt LC(LA(LG(RIGHT))) LA(LC(RIGHT))  &kp K_VOLUME_DOWN    &kp LEFT    &kp DOWN          &kp UP       &kp RIGHT  &none  &none
-&trans             &open_foobar                                   &open_slack                           &open_brave                         &open_intellij                       &kp K_MUTE           &none       &kp PAGE_DOWN     &kp PAGE_UP  &none      &none  &none
-                                                                                                        &kp LGUI                            &trans                               &kp SPACE            &kp RET     &trans            &kp RALT
-            >;
-
-            label = "navigation";
-        };
-
-        conditonal_layer {
-            bindings = <
-&bt BT_CLR   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_BLE    &tog 1  &to 1  &none  &none  &none  &none
-&sys_reset   &none         &none         &none         &none         &out OUT_USB    &tog 0  &to 0  &none  &none  &none  &sys_reset
-&bootloader  &none         &none         &none         &none         &none           &none   &none  &none  &none  &none  &bootloader
-                                         &none         &none         &none           &none   &none  &none
-            >;
-
-            label = "system";
-        };
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        conditional {
-            if-layers = <2 3>;
-            then-layer = <4>;
-        };
-    };
 };
